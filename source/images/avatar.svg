@@ -1,0 +1,12 @@
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Juehyx avatar">
+  <defs>
+    <linearGradient id="g" x1="44" y1="24" x2="224" y2="232" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#14b8a6"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="56" fill="#111827"/>
+  <circle cx="128" cy="128" r="88" fill="url(#g)" opacity=".95"/>
+  <path d="M84 96h88v18h-34v68h-20v-68H84V96z" fill="#fff"/>
+  <path d="M87 178h82v18H87z" fill="#fff" opacity=".85"/>
+</svg>

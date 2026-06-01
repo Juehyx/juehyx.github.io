@@ -1,0 +1,86 @@
+# Site
+title: Juehyx
+subtitle: Pwn / Binary Security / Notes
+description: Juehyx 的个人博客，记录 Pwn、二进制安全、CTF 和工程学习笔记。
+keywords: pwn, ctf, binary security, linux, reverse engineering
+author: Juehyx
+language: zh-CN
+timezone: Asia/Shanghai
+
+# URL
+url: https://juehyx.github.io
+root: /
+permalink: posts/:year/:month/:day/:title/
+permalink_defaults:
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+new_post_name: :title.md
+default_layout: post
+titlecase: false
+external_link:
+  enable: true
+  field: site
+  exclude: ''
+filename_case: 0
+render_drafts: false
+post_asset_folder: true
+relative_link: false
+future: true
+syntax_highlighter: highlight.js
+highlight:
+  line_number: true
+  auto_detect: false
+  tab_replace: ''
+  wrap: true
+  hljs: false
+prismjs:
+  preprocess: true
+  line_number: true
+  tab_replace: ''
+
+# Home page
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: -date
+
+# Category & Tag
+default_category: notes
+category_map:
+tag_map:
+
+# Metadata elements
+meta_generator: true
+
+# Date / Time format
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+updated_option: mtime
+
+# Pagination
+per_page: 10
+pagination_dir: page
+
+# Extensions
+theme: redefine
+
+# Search
+search:
+  path: search.xml
+  field: post
+  content: true
+  format: html
+
+# Deployment is handled by GitHub Actions.
+deploy:
+  type: ''
