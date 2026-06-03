@@ -41,12 +41,19 @@ body,
 .app,
 main,
 .main,
+.layout,
+.layout-container,
+.main-wrapper,
 .main-container,
 .page-main-container,
 .main-content-container,
 .content-container,
 .site-content,
 .page-content,
+.home-container,
+.home-main-container,
+.home-main-content,
+.home-content,
 .post-page,
 .category-page,
 .archive-page,
@@ -62,6 +69,17 @@ main,
     var(--site-bg-image) !important;
   background-position: center center !important;
   background-size: cover !important;
+}
+
+.home-container,
+.home-main-container,
+.home-main-content,
+.home-content,
+.main-container,
+.main-content-container {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.5)),
+    var(--site-bg-image) center center / cover fixed no-repeat !important;
 }
 
 .main-content,
