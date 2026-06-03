@@ -1,7 +1,7 @@
 'use strict';
 
 const bannerBackground = [
-  'background:linear-gradient(rgba(255,255,255,.22),rgba(255,255,255,.5)),url("/images/banner.svg") center center / cover fixed no-repeat !important',
+  'background:linear-gradient(rgba(255,255,255,.14),rgba(255,255,255,.24)),url("/images/banner.svg") center center / cover fixed no-repeat !important',
   'background-color:transparent !important'
 ].join(';');
 
@@ -9,9 +9,10 @@ const siteBackgroundCss = `
 <style id="site-banner-bg">
 :root {
   --site-bg-image: url("/images/banner.svg");
-  --site-surface: rgba(255, 255, 255, 0.78);
-  --site-surface-strong: rgba(255, 255, 255, 0.9);
-  --site-border: rgba(255, 255, 255, 0.42);
+  --site-surface: rgba(255, 255, 255, 0.36);
+  --site-surface-soft: rgba(255, 255, 255, 0.2);
+  --site-surface-strong: rgba(255, 255, 255, 0.58);
+  --site-border: rgba(255, 255, 255, 0.28);
 }
 
 html,
@@ -22,7 +23,7 @@ body {
 html,
 body {
   background:
-    linear-gradient(rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.18)),
+    linear-gradient(rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.24)),
     var(--site-bg-image) center center / cover fixed no-repeat !important;
   background-color: transparent !important;
 }
@@ -34,8 +35,8 @@ body::before {
   z-index: -1;
   pointer-events: none;
   background:
-    radial-gradient(circle at 18% 12%, rgba(255, 255, 255, 0.36), transparent 32rem),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.48));
+    radial-gradient(circle at 18% 12%, rgba(255, 255, 255, 0.22), transparent 32rem),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.28));
 }
 
 body,
@@ -62,8 +63,20 @@ main,
 .archives-page,
 .categories-page,
 .tags-page,
-.page-container {
+.page-container,
+.post-page-container,
+.archive-page-container,
+.category-page-container,
+.tag-page-container,
+.links-page-container,
+.about-page-container,
+.home-content-container,
+.home-article-list,
+.category-list-container,
+.archive-list-container,
+.tag-list-container {
   background-color: transparent !important;
+  background-image: none !important;
 }
 
 .home-banner-container,
@@ -76,93 +89,65 @@ main,
   background-size: cover !important;
 }
 
-.home-container,
-.home-main-container,
-.home-main-content,
-.home-content,
-.main-container,
-.main-content-container,
-.main-content-body,
-.home-content-container,
-.page-main-container,
-.page-content,
-.post-page,
-.post-page-container,
-.archive-page,
-.archives-page,
-.archive-page-container,
-.category-page,
-.categories-page,
-.category-page-container,
-.tag-page,
-.tags-page,
-.tag-page-container,
-.links-page-container,
-.about-page-container,
-[class*="archive"][class*="container"],
-[class*="archives"][class*="container"],
-[class*="category"][class*="container"],
-[class*="categories"][class*="container"],
-[class*="tag"][class*="container"],
-[class*="tags"][class*="container"],
-[class*="post"][class*="container"],
-[class*="article"][class*="container"],
-[class*="page"][class*="container"] {
-  background:
-    linear-gradient(rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.5)),
-    var(--site-bg-image) center center / cover fixed no-repeat !important;
-}
-
 .main-content,
-.page-container,
-.post-page-container,
-.archive-page-container,
-.category-page-container,
-.tag-page-container,
-.links-page-container,
-.about-page-container,
-.category-list-container,
-.category-list-item,
-.archive-list-container,
-.archive-list-item,
-.tag-list-container,
-.tag-list-item,
-.article-content,
-.post-content,
-.post-header,
-.post-meta,
-.post-toc,
-.toc-content-container,
-.side-tools,
 .sidebar,
-.home-sidebar,
-.home-article-list,
-.home-article-item,
-.recent-post-item,
-.article-card,
-.post-card,
-.page-card,
-.card,
-.content-card {
+.home-sidebar {
   background-color: var(--site-surface) !important;
   border-color: var(--site-border) !important;
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
 }
 
+.article-content,
+.post-content,
+.post-header,
+.post-meta,
+.page-content,
+.home-article-item,
+.recent-post-item,
+.article-card,
+.post-card,
+.page-card,
+.category-list-item,
+.archive-list-item,
+.tag-list-item,
+.card,
+.content-card {
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+.post-toc,
+.toc-content-container,
+.side-tools {
+  background-color: var(--site-surface-soft) !important;
+  border-color: var(--site-border) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
 .navbar,
 .navbar-container,
 #navbar {
-  background-color: rgba(255, 255, 255, 0.62) !important;
+  background-color: var(--site-surface-strong) !important;
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
 }
 
-.post-page-container,
 .page-container,
-.article-content,
-.post-content {
-  background-color: var(--site-surface-strong) !important;
+.post-page-container,
+.archive-page-container,
+.category-page-container,
+.tag-page-container,
+.links-page-container,
+.about-page-container {
+  box-shadow: none !important;
+}
+
+.main-content {
+  border-radius: 14px;
+  box-shadow: 0 18px 60px rgba(31, 41, 55, 0.08) !important;
 }
 
 @media (max-width: 768px) {
@@ -191,24 +176,6 @@ function injectStyleBlock(html) {
   return `${siteBackgroundCss}\n${html}`;
 }
 
-function appendStyleTag(html, selector, style) {
-  const classPattern = selector.replace('.', '');
-  const tagPattern = new RegExp(
-    `(<[^>]+class=(["'])[^"']*\\b${classPattern}\\b[^"']*\\2)([^>]*>)`,
-    'g'
-  );
-
-  return html.replace(tagPattern, (match, start, quote, rest) => {
-    if (/style=(["'])/i.test(match)) {
-      return match.replace(/style=(["'])(.*?)\1/i, (_styleMatch, styleQuote, value) => (
-        `style=${styleQuote}${value};${style}${styleQuote}`
-      ));
-    }
-
-    return `${start} style="${style}"${rest}`;
-  });
-}
-
 function appendBodyStyle(html, style) {
   return html.replace(/<body([^>]*)>/i, (match) => {
     if (/style=(["'])/i.test(match)) {
@@ -221,37 +188,8 @@ function appendBodyStyle(html, style) {
   });
 }
 
-hexo.extend.filter.register('after_render:html', (html, data) => {
+hexo.extend.filter.register('after_render:html', (html) => {
   if (!/<(?:html|body)\b/i.test(html)) return html;
 
-  let output = injectStyleBlock(appendBodyStyle(html, bannerBackground));
-
-  [
-    '.page-container',
-    '.main-content',
-    '.main-container',
-    '.main-content-container',
-    '.main-content-body',
-    '.page-main-container',
-    '.page-content',
-    '.home-content-container',
-    '.home-article-list',
-    '.post-page',
-    '.post-page-container',
-    '.archive-page',
-    '.archives-page',
-    '.archive-page-container',
-    '.category-page',
-    '.categories-page',
-    '.category-page-container',
-    '.tag-page',
-    '.tags-page',
-    '.tag-page-container',
-    '.links-page-container',
-    '.about-page-container'
-  ].forEach((selector) => {
-    output = appendStyleTag(output, selector, bannerBackground);
-  });
-
-  return output;
+  return injectStyleBlock(appendBodyStyle(html, bannerBackground));
 });
