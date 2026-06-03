@@ -1,7 +1,6 @@
 ---
 title: Hello, Juehyx
 date: 2026-06-01 20:30:00
-banner: /images/banner.svg
 tags:
   - Blog
   - Hexo

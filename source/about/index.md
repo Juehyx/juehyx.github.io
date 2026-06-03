@@ -2,7 +2,6 @@
 title: 说明
 date: 2026-06-01 20:30:00
 type: about
-banner: /images/banner.svg
 ---
 
 你好，我是 Juehyx。

@@ -1,7 +1,6 @@
 ---
 title: Pwn 笔记模板
 date: 2026-06-01 20:35:00
-banner: /images/banner.svg
 tags:
   - Pwn
   - Heap
