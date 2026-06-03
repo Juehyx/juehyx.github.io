@@ -59,6 +59,9 @@ main,
 .archive-page,
 .category-page,
 .tag-page,
+.archives-page,
+.categories-page,
+.tags-page,
 .page-container {
   background-color: transparent !important;
 }
@@ -80,7 +83,31 @@ main,
 .main-container,
 .main-content-container,
 .main-content-body,
-.home-content-container {
+.home-content-container,
+.page-main-container,
+.page-content,
+.post-page,
+.post-page-container,
+.archive-page,
+.archives-page,
+.archive-page-container,
+.category-page,
+.categories-page,
+.category-page-container,
+.tag-page,
+.tags-page,
+.tag-page-container,
+.links-page-container,
+.about-page-container,
+[class*="archive"][class*="container"],
+[class*="archives"][class*="container"],
+[class*="category"][class*="container"],
+[class*="categories"][class*="container"],
+[class*="tag"][class*="container"],
+[class*="tags"][class*="container"],
+[class*="post"][class*="container"],
+[class*="article"][class*="container"],
+[class*="page"][class*="container"] {
   background:
     linear-gradient(rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.5)),
     var(--site-bg-image) center center / cover fixed no-repeat !important;
@@ -195,20 +222,30 @@ function appendBodyStyle(html, style) {
 }
 
 hexo.extend.filter.register('after_render:html', (html, data) => {
-  if (!data || !/\.html$/i.test(data.path || '')) return html;
+  if (!/<(?:html|body)\b/i.test(html)) return html;
 
   let output = injectStyleBlock(appendBodyStyle(html, bannerBackground));
 
   [
     '.page-container',
     '.main-content',
+    '.main-container',
     '.main-content-container',
     '.main-content-body',
+    '.page-main-container',
+    '.page-content',
     '.home-content-container',
     '.home-article-list',
+    '.post-page',
     '.post-page-container',
+    '.archive-page',
+    '.archives-page',
     '.archive-page-container',
+    '.category-page',
+    '.categories-page',
     '.category-page-container',
+    '.tag-page',
+    '.tags-page',
     '.tag-page-container',
     '.links-page-container',
     '.about-page-container'
