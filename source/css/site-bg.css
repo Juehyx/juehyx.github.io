@@ -41,13 +41,9 @@ body,
 .app,
 main,
 .main,
-.layout,
-.layout-container,
-.main-wrapper,
 .main-container,
 .page-main-container,
 .main-content-container,
-.main-content-body,
 .content-container,
 .site-content,
 .page-content,
@@ -76,18 +72,16 @@ main,
 .home-main-container,
 .home-main-content,
 .home-content,
-.home-content-container,
-.home-article-list,
-.main-content,
 .main-container,
-.main-content-container,
-.main-content-body,
-.page-container {
+.main-content-container {
   background:
     linear-gradient(rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.5)),
     var(--site-bg-image) center center / cover fixed no-repeat !important;
 }
 
+.main-content,
+.home-content-container,
+.page-container,
 .post-page-container,
 .archive-page-container,
 .category-page-container,
@@ -109,6 +103,7 @@ main,
 .side-tools,
 .sidebar,
 .home-sidebar,
+.home-article-list,
 .home-article-item,
 .recent-post-item,
 .article-card,
@@ -131,6 +126,7 @@ main,
 }
 
 .post-page-container,
+.page-container,
 .article-content,
 .post-content {
   background-color: var(--site-surface-strong) !important;
