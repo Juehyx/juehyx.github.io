@@ -10,10 +10,17 @@ body {
   min-height: 100%;
 }
 
+html {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.18)),
+    var(--site-bg-image) center center / cover fixed no-repeat !important;
+}
+
 body {
   background:
     linear-gradient(rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.18)),
     var(--site-bg-image) center center / cover fixed no-repeat !important;
+  background-color: transparent !important;
 }
 
 body::before {
@@ -25,6 +32,26 @@ body::before {
   background:
     radial-gradient(circle at 18% 12%, rgba(255, 255, 255, 0.36), transparent 32rem),
     linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.48));
+}
+
+body,
+#body-wrap,
+.body-wrap,
+#app,
+.app,
+main,
+.main,
+.main-container,
+.page-main-container,
+.main-content-container,
+.content-container,
+.site-content,
+.page-content,
+.post-page,
+.category-page,
+.archive-page,
+.tag-page {
+  background-color: transparent !important;
 }
 
 .home-banner-container,
@@ -46,8 +73,16 @@ body::before {
 .tag-page-container,
 .links-page-container,
 .about-page-container,
+.category-list-container,
+.category-list-item,
+.archive-list-container,
+.archive-list-item,
+.tag-list-container,
+.tag-list-item,
 .article-content,
 .post-content,
+.post-header,
+.post-meta,
 .post-toc,
 .toc-content-container,
 .side-tools,
