@@ -1,3 +1,12 @@
+---
+title: ctf
+date: 2026-06-03 14:37:00
+tags:
+  - ctf
+categories:
+  - CTF
+---
+
 # MISC
 
 ## 一、伪加密和真加密
