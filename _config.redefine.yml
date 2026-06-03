@@ -114,7 +114,7 @@ home:
   sidebar:
     enable: true
     position: left
-    first_item: menu
+    first_item: info
     announcement: 欢迎来到 Juehyx 的安全学习笔记。
     show_on_mobile: true
     links:
